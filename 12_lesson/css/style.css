@@ -1,0 +1,10 @@
+.kuku {
+	border: 5px solid green;
+}
+.error {
+	border-color: rgb(199, 19, 19);
+}
+img {
+	width: 400px;
+	padding: 20px;
+}
