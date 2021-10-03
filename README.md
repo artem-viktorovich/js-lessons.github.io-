@@ -1,1 +1,1 @@
-# js_lessons
+# js-lessons.github.io 
