@@ -1,0 +1,43 @@
+.operat-input>div{
+	display: inline-flex;
+}
+.operat-input{
+	padding-bottom: 20px;
+}
+div.number-input{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+input{
+	display: inline-block;
+	width:80px;
+	margin: 6px;
+	padding: 6px 8px;
+}
+label{
+	padding: 6px;
+	font-size: 20px;
+}
+.st-calculator{
+	display: flex;
+	width: 700px;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+   align-items: center;
+	background: #F2F2F2;
+	margin-top: 200px;
+}
+button{
+	height: 50px;
+	width: 50px;
+	margin: 10px;
+	background: #7F687D;
+	border-radius: 50%;
+	border: 1px solid #7F687D;
+	font-size: 16px;
+}
+.operator-block{
+	padding: 20px 0px;
+}
