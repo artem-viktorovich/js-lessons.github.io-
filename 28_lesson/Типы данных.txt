@@ -1,0 +1,10 @@
+В Js сущ. определенные типы данных:
+Undefined - переменная вернет определенный тип данных ели она была объявлена но ей не было присвоено значения
+Null
+Boolean
+Number
+BigInt
+Strimg
+Symbol
+Pbject
+Function
