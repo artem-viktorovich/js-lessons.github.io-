@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function(){
 				const input = formReq[index];
 				formRemoveError(input); //чтобы приступить к работе, надо убирать класс error
 
-				if(input.classList.contains('_email')){
-					if(emailTest(input)){
+				if(input.classList.contains('_email')) {
+					if (emailTest(input)) {
 						formAddError(input);
 						error++;
 					}

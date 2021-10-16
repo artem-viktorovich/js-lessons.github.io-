@@ -114,8 +114,8 @@ body.lock {
 	color: #fff;
 	padding: 30px 0px;
 }
-.form{
-
+.form * {
+	outline: none;
 }
 
 .form__body {
@@ -144,6 +144,7 @@ body.lock {
 	padding-top: 15px;
 }
 .form__item {
+	margin: 0px 0px 20px 0px;
 }
 .form__label {
 	font-size: 18px;
@@ -156,6 +157,7 @@ body.lock {
 	border-radius: 5px;
 	width: 100%;
 	font-size: 18px;
+	transition: all 0.3s ease 0s;
 }
 .form__input._error{
 	box-shadow: 0 0 15px #ff0000;
@@ -189,6 +191,7 @@ display: inline-flex;
 line-height: 140%;
 align-items: center;
 position: relative;
+cursor: pointer;
 }
 .options__label::before{
 	content: "";
@@ -212,11 +215,7 @@ position: relative;
 	transform: scale(0);
 
 }
-.select {
-}
-.file{
 
-}
 .file__item {
 position: relative;
 }
@@ -241,7 +240,7 @@ cursor: pointer;
 }
 .file__preview {
 	display: inline-block;
-	max-width: 100%;
+	max-width: 150px;
 	padding-top: 10px;
 }
 .file__preview img{
