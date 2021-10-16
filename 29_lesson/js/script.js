@@ -6,10 +6,28 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	async function formSend(e) {
 		e.preventDefault();
+				let error = formValidate(form); //переход в функци и отправка
 
-		let error = formValidate(form); //переход в функци 
+				let formData = new FormData(form); //вытягиваем данные полей
+				formData.append('image', formImage.files[0]); //добавляем изображение при обработке внизу
+
 		if (error = 0){
-
+			form.classList.add('_sending');//сообщает пользователю об отправке формы
+			let response = await fetch ('sendmail.php', {
+				method: 'POST',
+				body: formData
+			});
+			//создаем ответ об отправке
+			if(response.ok){
+				let result = await response.json(); //нашли файл
+				alert(result.message);// отправили сообщение
+				formPreview.innerHTML = '';
+				form.reset();//почистили форму
+				form.classList.remove('_sending');
+			} else {
+				alert('Ошибка');
+				form.classList.remove('_sending'); //если появилась ошибка, класс отбираем
+			}
 		}else{
 			alert('Заполните обязательные поля');
 		}
@@ -75,6 +93,17 @@ document.addEventListener('DOMContentLoaded', function(){
 				alert('Файл должен быть менее 2 Мб.');
 				return;
 			}
-		}
+
+			//Подгрузка и отображение картинки выбранной
+			var reader = new FileReader();
+			reader.onload = function (e){
+				formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+			};
+			reader.onerror = function (e) {
+				alert('Ошибка');
+			};
+				reader.readAsDataURL(file);
+			}
+		
 
 });

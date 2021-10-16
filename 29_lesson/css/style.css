@@ -114,7 +114,28 @@ body.lock {
 	color: #fff;
 	padding: 30px 0px;
 }
+.form{
+
+}
+
 .form__body {
+	position: relative;
+}
+.form__body::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(51,51,51,0.9) url('../img/loading.gif') center / 50px no-repeat;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
+.form__body._sending::after{
+	opacity: 1;
+	visibility: visible;
 }
 .form__title {
 	font-size: 30px;
@@ -138,6 +159,9 @@ body.lock {
 }
 .form__input._error{
 	box-shadow: 0 0 15px #ff0000;
+}
+#formPreview img{
+	width: 120px;
 }
 .form__input:focus{
 	box-shadow: 0 0 15px #7a956b;
