@@ -17,28 +17,28 @@
 			<h1 class="form__title">Отправка формы на почту</h1>
 			<div class="form__item">
 				<label for="formName" class="form__label">Имя*:</label>
-				<input id ='formName' type="text" name="name" class="form__input">
+				<input id ='formName' type="text" name="name" class="form__input _req">
 			</div>
 			<div class="form__item">
 				<label for="formEmail" class="form__label">E-mail*:</label>
-				<input id ='formEmail' type="text" name="email" class="form__input">
+				<input id ='formEmail' type="text" name="email" class="form__input _req _email">
 			</div>
 			<div class="form__item">
 				<div class="form__title">Левша или правша?</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="formRightHanded" checked type="radio" value="right" name="hand" class="options__input">
+							<input id="formRightHanded" checked type="radio" value="right" name="hand" class="options__input options__radio">
 							<label for="formRightHanded" class="options__label"><span>Правша</span></label>
 						</div>
 						<div class="options__item">
-							<input id="formLeftHanded" type="radio" value="left" name="hand" class="options__input">
+							<input id="formLeftHanded" type="radio" value="left" name="hand" class="options__input options__radio">
 							<label for="formLeftHanded" class="options__label"><span>Левша</span></label>
 						</div>
 					</div>
 			</div>
 			<div class="form__item">
 				<label for="forMessage" class="form__label">Сообщение</label>
-				<textarea name="message" id="forMessage" class="options__input"></textarea>
+				<textarea name="message" id="forMessage" class="form__input"></textarea>
 			</div>
 			<div class="form__item">
 				<div class="form__label">Возраст:</div>
@@ -49,19 +49,18 @@
 				</select>
 			</div>
 			<div class="form__item">
-				<div class="form__label">
+				<div class="form__label">Прикрепить фото</div>
 					<div class="file">
 						<div class="file__item">
 							<input id="formImage" acccept='.jpg, .png, .gif' type="file" name="image" class="file__input">
 							<div class="file__button">Выбрать</div>
 						</div>
 					</div>
-				</div>
 				<div class="file__preview"></div>
 			</div>
 			<div class="form__item">
 				<div class="checkbox">
-					<input id="formAgreement" checked type="checkbox" name="agreement" class="checbox__input">
+					<input id="formAgreement" checked type="checkbox" name="agreement" class="checbox__input _req">
 					<label for="formAgreement" class="checkbox__label"><span>Я даю своё согласие на обработку персональных данных в соответствии с <a href="">Условиями</a>*</span></label>
 				</div>
 			</div>
