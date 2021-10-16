@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function(){
 					formAddError(input);
 						error++;
 				}else{ //проверка на заполненность формы
-					if (input.value === ' '){
+					if (input.value === ''){
 						formAddError(input);
 						error++;
 					}
@@ -54,5 +54,27 @@ document.addEventListener('DOMContentLoaded', function(){
 	function emailTest(input) { //функция для проверки наличия ненужных символов в инпуте
 		return !/^\w([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value); 
 	}
+
+	const formImage = document.getElementById('formImage'); //Получаем инпут file в переменую
+	const formPreview = document.getElementById('formPreview'); //Получаем див для превью в переменную
+
+		//Слушаем изменения в инпуте
+	formImage.addEventListener('change', () => {
+		uploadFile(formImage.files[0]);
+	});
+
+		function uploadFile(file) {
+			//проверяем тип файла
+			if(!['image/jpeg', 'image/png', 'image/gif',].includes(file.type)){
+				alert('Разрешены только изображения.');
+				formImage.value = '';
+				return;
+			}
+			//проверяем размер файла (<2 Мб)
+			if(file.size > 2 * 1024 * 1024){
+				alert('Файл должен быть менее 2 Мб.');
+				return;
+			}
+		}
 
 });
