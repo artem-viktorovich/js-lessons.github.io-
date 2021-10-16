@@ -1,63 +1,50 @@
-let userName;
-console.log (typeof userName); //получаем тип данных
-console.log(userName); //поулчаем значение переменной
+"use strict"
+document.addEventListener('DOMContentLoaded', function(){
+	const form = document.getElementById('form'); //перехватываем элемент для отправки
+	form.addEventListener('submit', formSend);  //при отправке формы, должны перейти в функцию formSend
 
-// Примеры использования
-//  Проверяем определена ли переменная
-if (userName === undefined){
-	console.log('Переменная НЕ определена');
-} else {
-	console.log('Переменная определена');
-}
+	async function formSend(e) {
+		e.preventDefault();
 
-if (typeof userName === 'undefined'){  // подойдет для дебагинга
-	console.log('Переменная НЕ определена');
-} else {
-	console.log('Переменная определена');
-}
+		let error = formValidate(form); //переход в функци 
+	}
 
-//=====================================
+	function formValidate(form) {
+			let error = 0;
+			let formReq = document.querySelectorAll('._req'); //класс который обведёт незаполненные поля
 
-// let userName = null; //содержит только одно значение
-// console.log(userName);
+			for (let index = 0; index < formReq.length; index++) { //для работы получения событий с input
+				const input = formReq[index];
+				formRemoveError(input); //чтобы приступить к работе, надо убирать класс error
+				if(input.classList.contains('_email')){
+					if(emailTest(input)){
+						formAddError(input);
+						error++;
+					}
 
-//Обратимся к элементу., которого нет
+				}else if (input.getAttribute("type") === "checkbox" && input.checked === false){
+					formAddError(input);
+						error++;
+				}else{ //проверка на заполненность формы
+					if (input.value === ''){
+						formAddError(input);
+						error++;
+					}
+				}
 
-let block = document.querySelector('.block');
+			}
+	}
 
-//Получим null
-console.log(block);
+	function formError(input) {
+		input.parantElement.classList.add('_error');
+		input.classList.add('_error');
+	}
+	function formRemoveError(input) {
+		input.parantElement.classList.remove('_error');
+		input.classList.remove('_error');
+	}
+	function emailTest(input) { //функция для проверки наличия ненужных символов в инпуте
+		return !/^\w([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value); //
+	}
 
-//Вернем тип object
-console.log(typeof block);
-
-
-
-/* Boolean*/
-let willYouMarryMe = false;
-if (willYouMarryMe) {
-	console.log(':)');
-} else {
-	console.log(':(');
-}
-
-//Также переменная может сама получать, одно из этих значений
-let trueOrFalse = 6 < 18;
-console.log(trueOrFalse);
-
-//Number
-/*
-let userAge = 20;
-let userHeight = 1.83;
-console.log(userAge);
-console.log(userHeight);
-console.log(typeof userAge);
-console.log(typeof userHeight);
-*/
-//String
-// '' от "" не имеют разницы, но обратные`` используют для формул
-
-let userAge = 20;
-let userAgeInfo =`Возраст: ${userAge}`;
-console.log(userAgeInfo);
-
+});
