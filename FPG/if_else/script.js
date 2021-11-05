@@ -18,14 +18,50 @@
 // 	console.log ('Условие не выполнено');
 // }
 
-let message = "Привет";
-let messageEnd;
 
-if (5 > 1) {
-	messageEnd = ", Вася!";
+
+// let message = "Привет";
+// let messageEnd;
+
+// if (5 > 1) {
+// 	messageEnd = ", Вася!";
+// } else {
+// 	messageEnd = ", Оля!";
+// }
+
+// message += messageEnd;
+// console.log(message);
+
+
+// ? - условный оператор
+// let message = 'Привет';
+
+// let messageEnd;
+// let number = 35;
+// let messageEnd = 5>4 ? ', Вася!' : ', Оля!';
+// message += messageEnd;
+// console.log(message);
+
+//более сложное использование условного оператора ?
+let message = 'Привет';
+let messageEnd;
+let number = 35;
+
+if (number > 50) {
+	messageEnd = ', Вася!';
+} else if (number > 30) {
+	messageEnd = ', Оля!';
+} else if (number > 10) {
+	messageEnd = ', Миша!';
+} else if (number > 1) {
+	messageEnd = ', Андрей!';
 } else {
-	messageEnd = ", Оля!";
+	messageEnd = ', Иннокентий!';
 }
+messageEnd = number > 4 ? ', Вася! ' :
+	number > 30 ? ', Оля!' :
+		number > 10 ? ', Миша!' :
+			number > 15 ? ', Андрей!' : 'Иннокентий!';
 
 message += messageEnd;
 console.log(message);
