@@ -22,16 +22,20 @@
 
 // let message = "Привет";
 // let messageEnd;
+// let number = 6;
 
-// if (5 > 1) {
+// if (number > 1) {
 // 	messageEnd = ", Вася!";
 // } else {
 // 	messageEnd = ", Оля!";
 // }
-
 // message += messageEnd;
 // console.log(message);
 
+//короткая запись форулы выше
+// let messageEnd = (1 > 1) ? ', Вася!' : ', Оля!';
+// message += messageEnd;
+// console.log(message);
 
 // ? - условный оператор
 // let message = 'Привет';
@@ -45,7 +49,7 @@
 //более сложное использование условного оператора ?
 let message = 'Привет';
 let messageEnd;
-let number = 35;
+let number = 5;
 
 if (number > 50) {
 	messageEnd = ', Вася!';
@@ -58,10 +62,19 @@ if (number > 50) {
 } else {
 	messageEnd = ', Иннокентий!';
 }
-messageEnd = number > 4 ? ', Вася! ' :
+messageEnd = number > 5 ? ', Вася! ' :
 	number > 30 ? ', Оля!' :
 		number > 10 ? ', Миша!' :
-			number > 15 ? ', Андрей!' : 'Иннокентий!';
+			number > 15 ? ', Андрей!' : ' Иннокентий!';
 
 message += messageEnd;
 console.log(message);
+
+
+//Синтаксис
+// let message = 'Привет фрилансер';
+
+// if (true) {
+// 	console.log(message);
+// 	console.log(typeof message);
+// };
