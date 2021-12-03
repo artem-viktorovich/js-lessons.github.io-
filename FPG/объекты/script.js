@@ -68,3 +68,54 @@ delete userInfo['likes JS'];
 
 console.log(userInfo);*/
 
+/*
+Изменение объекта
+Копирование
+При копировании объекта в другую переменную сам объект не дубоируется,
+ а копируется только ссылка на него
+*/
+/*
+let userInfo = {
+	name: 'Vasy',
+	age: 30,
+};
+
+console.log(userInfo);
+
+let user = userInfo; //скопирована сама ссылка
+console.log(user);
+user.age = 18;
+console.log(userInfo);
+*/
+//с помощью копирования можно добиться изменения свойств 
+//внутри объекта, даже в константе
+
+//Дублирование объекта
+//Синтаксис
+//Object.assign(куда(объект), что (свойство#1), что (свойсво #2), ...);
+/*
+let userInfo = {
+	name: 'Vasy',
+	age: 30,
+};
+
+let user = Object.assign({}, userInfo); //создаю пустой объект с указанием ссылки
+
+user.age = 18;
+
+console.log(userInfo);
+console.log(user);
+*/
+
+//Проверка существования свойства
+
+let userInfo = {
+	name: 'Vasy',
+	age: 30,
+};
+
+//console.log(userInfo.age);
+
+if (userInfo.age) {
+	console.log(userInfo.age);  //проверка на наличие свойства в объекте
+}
