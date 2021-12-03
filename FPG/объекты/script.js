@@ -33,3 +33,7 @@ console.log(userInfo['likes JS']);
 
 
 */
+
+//Преимущества квадратных скобок
+let key = 'name';
+console.log(userInfo[key]); //с помощью этой функции можно вывести имя
