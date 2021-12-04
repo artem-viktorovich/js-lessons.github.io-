@@ -108,7 +108,7 @@ console.log(user);
 */
 
 //Проверка существования свойства
-
+/*
 let userInfo = {
 	name: 'Vasy',
 	age: 30,
@@ -119,3 +119,31 @@ let userInfo = {
 if (userInfo.age) {
 	console.log(userInfo.age);  //проверка на наличие свойства в объекте
 }
+*/
+
+//Цикл for ... in
+/*
+Для перебора всех свойств объекта используется цикл  for ... in
+Этот цикл отличается от изученного цикла for (;;).
+
+
+for (let key in object) {
+	тело цикла выполняется после каждого свойства объекта
+}*/
+/*
+let userInfo = {
+	name: 'Vasy',
+	age: 30,
+	adress: {
+		city: 'york',
+		street: 'fredom',
+	}
+};
+
+for ( let key in userInfo) {
+	console.log(key);
+	console.log(userInfo[key]);
+}// выводи каждый ключ и его свойство
+*/
+
+//Методы объекта
