@@ -146,4 +146,33 @@ for ( let key in userInfo) {
 }// выводи каждый ключ и его свойство
 */
 
-//Методы объекта
+//Домашка
+/*
+let userInfo = {
+	name: 'Vasy',
+	age: 30,
+	'58': '<e,erf',
+	showInfo() {
+		console.log(`${this.name}`);
+	}
+}
+let user = userInfo;
+//userInfo = null;
+user.showInfo();
+*/
+
+let userInfo = {
+
+};
+
+userInfo.age = 30;
+console.log(userInfo);
+
+userInfo.name = 'Vasy';
+console.log(userInfo);
+
+userInfo.name = "Лена";
+console.log(userInfo);
+
+delete userInfo.name;
+console.log(userInfo);
