@@ -233,3 +233,26 @@ console.log(arrFour);*/
 и дополнительные значения (в конц массива)
 Синтаксис arr.concat(arg1, arg2 ...)
 */
+/*
+let arrOne = ['Ваня', 'Колян', 'Лопата',];
+let arrTwo = arrOne.concat('Петя');
+console.log(arrTwo);
+*/
+//Методы indexOf/lastIndexOf и includes - аналоги строковым методам
+
+/*
+1. arr.indexOf(item, from) ищет item, начиная с индекса from, 
+и возвращает индекс, на котором был найден искомый элемент, в противном случае - 1.
+2. arr.lastIndexOf(item, from)- те же функции. но поиск производит справа налево.
+3. arr.includes(item, from) - ищет item, начиная с индекса from, и возвращает true, если поиск успешен
+*/
+
+let arrOne = ['Ваня', 'Колян', 'Лопата',];
+//indexOf
+console.log(arrOne.indexOf('Колян'));
+console.log(arrOne.indexOf('Вася'));
+console.log(arrOne.indexOf('Вася' , 2));
+//includes
+console.log(arrOne.includes('Колян'));
+console.log(arrOne.includes('Вася'));
+console.log(arrOne.includes('Вася' , 2));
