@@ -246,7 +246,7 @@ console.log(arrTwo);
 2. arr.lastIndexOf(item, from)- те же функции. но поиск производит справа налево.
 3. arr.includes(item, from) - ищет item, начиная с индекса from, и возвращает true, если поиск успешен
 */
-
+/*
 let arrOne = ['Ваня', 'Колян', 'Лопата',];
 //indexOf
 console.log(arrOne.indexOf('Колян'));
@@ -256,3 +256,59 @@ console.log(arrOne.indexOf('Вася' , 2));
 console.log(arrOne.includes('Колян'));
 console.log(arrOne.includes('Вася'));
 console.log(arrOne.includes('Вася' , 2));
+*/
+
+//Поиск в массиве
+
+//find и findIndex
+//поиск в массиве объектов с определенным условием
+
+/*
+let result = arr.find(function(item, index, array){
+	если true - взвращается текущий элемент и перебор прерывается,
+	если все итерации оказались ложными, возвращается undefined 
+});
+*/
+/*
+let arr = [
+	{ name: 'Вася', age: 15 },
+	{ name: 'Коля', age: 18 },
+	{ name: 'Оля', age: 'не скажу' },
+]
+
+let resultOne = arr.find(function (item, index, array) {
+	return item.age === 18;
+});
+console.log(resultOne);
+
+/рефакторинг с помощью стрелочной функции
+
+let resultOne = arr.find(item => item.age === 18);
+console.log(resultOne);
+
+/findIndex
+let resultTwo = arr.findIndex(item => item.age === 'не скажу');
+console.log(resultTwo);
+*/
+
+//Поиск в массиве
+//filter 
+/*
+Метод ищет все элементы, на которых функция колбэк вернёт true
+let result = arr.filter(function(item, index, array){
+	если true - элемент добавляется к результату, и перебор продолжается,
+	возвращается пустой массив, в случае, если ничего не найдено
+});
+*/
+/*
+let arr = [
+	{ name: 'Вася', age: 36 },
+	{ name: 'Коля', age: 18 },
+	{ name: 'Оля', age: 'не скажу' },
+]
+
+let resultOne = arr.filter(function (item, index, array) {
+	return item.age >= 18;
+});
+console.log(resultOne);
+*/
