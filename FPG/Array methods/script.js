@@ -312,3 +312,36 @@ let resultOne = arr.filter(function (item, index, array) {
 });
 console.log(resultOne);
 */
+//Сортировка массивов
+//Метод sort (fn)
+//сортирует массив на месте, меняя в нём порядок элементов.
+
+/*
+let arrOne = ['Лопата', 'Ваня', 'Колян',];
+console.log(arrOne.sort());
+
+//Сортировка чисел
+let arrTwo = [8 , 22, 1,];
+console.log(arrTwo.sort());*/
+
+/*
+Преобразование массивов
+
+Метод map
+
+Вызывает функцию для каждого элемента массива
+и возвращает массив в результат выполнения этой функции
+
+let result = arr.map(function(item, index, array){
+	возвращает новое значение вместо элемента
+});
+
+*/
+/*
+let arrOne = ['Лопата', 'Ваня', 'Колян',];
+
+let result = arrOne.map(function(item, index, array){
+	return item [0];
+});
+
+console.log(result);  */ // ['Л', 'В', 'К',]
