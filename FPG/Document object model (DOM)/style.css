@@ -1,0 +1,13 @@
+body{
+	background-color: rgb(74, 83, 57);
+	margin: 0;
+	padding: 0;
+
+}
+.content{
+	padding: 20px;
+	font-weight: bold;
+}
+.yellow{
+	color: yellow;
+}
