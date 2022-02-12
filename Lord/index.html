@@ -115,12 +115,12 @@
 </footer>
 		<div id="popup-1" class="popup popup-1">
 	<div class="popup__body">
-		<div class="connect__row">
+		<div class="popup__connect">
 			<div class="close-popup">&times;</div>
 			<div class="connect__form">
 				<form action="#" class="form__body">
 					<div class="form__block">
-						<h1 class="form__title">Получить консультацию</h1>
+						<h3 class="form__title">Укажите ваши контактные данные</h3>
 						<div class="form__item">
 							<input id="formName" placeholder="Алексей" name="name" class="form__input" required>
 						</div>
@@ -130,17 +130,28 @@
 						</div>
 
 						<div class="popup-link ">
-							<button class="btn btn__header popup__send">Заказать звонок</button>
+							<button class="btn btn__header popup__send">Получить консультацию юриста</button>
+							<p>*отправляя формы на данном сайте, вы даете согласие на обработку персональных данных
+								в соответствии с 152-ФЗ</p>
 						</div>
 					</div>
-					<div class="form__thenx">
+					<div style="display:none" class="form__thenx">
 						<div class="popup-2">
-							<h1 class="form__title popup-title">Спасибо за заявку!</h1>
-							<div class="form__call form-text">Ожидайте звонка от нашего юриста</div>
-							<div class="logo"><span>П</span>равовед</div>
-							<div class="form-text form__action ">Списание долгов и банкротство</div>
+							<h1 class="form__title popup-title">Благодарим за заявку!</h1>
+							<div class="form__call form-text">Ожидайте звонка нашего юриста с номера</div>
+							<div class="number">
+								<a class="tel" href="tel:8 495 230 21 55">8 495 230 21 55</a>
+								<div class="block__social">
+									<p>Узнайте о нас больше</p>
+									<div class="social__icons">
+										<a href="#"><img src="img/social/telegram.png" alt="telegram"></a>
+										<a href="#"><img src="img/social/vk.png" alt="vk"></a>
+										<a href="#"><img src="img/social/OK.png" alt="OK"></a>
+										<a href="#"><img src="img/social/instagram.png" alt="instagram"></a>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
 				</form>
 			</div>
 		</div>
