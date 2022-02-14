@@ -17,7 +17,7 @@
 		<header class="header">
 	<div class="container">
 		<div class="header__body">
-			<div class="header__logo logo ibg">
+			<div class="header__logo logo">
 				<img src="img/01.png" alt="logo">
 			</div>
 			<div class="header__number">
@@ -33,30 +33,196 @@
 		<main class="main">
 
 			<div class="duty">
-				<div class="container">
-					<div class="duty__column">
-						<div class="duty__body">
-							<div class="duty__body-child1">
-								<h3>Списание долгов на основании ФЗ№ 127 «О нестостоятельности (банкротстве)»</h3>
-								<div class="duty__title">Спишем ваши долги</div>
-								<div class="duty__p"></div>
-								<div class="duty__list">
-									<ul>
-										<li class="list-duty">Варианты списания вашего долга</li>
-										<li class="list-duty">Консультацию юриста по списанию долгов</li>
-										<li class="list-duty">Сроки и стоимость списания</li>
-										<li class="list-duty">Список необходимых документов для начала процедуры</li>
-									</ul>
+				<div class="container ">
+					<div class="duty-flex">
+						<div class="duty__column duty-black">
+							<div class="duty__body ">
+								<div class="duty__body-child">
+									<h3>Списание долгов на основании ФЗ№ 127 «О нестостоятельности (банкротстве)»</h3>
+									<div class="duty__title">Спишем ваши долги</div>
+									<div class="duty__p">Пройдите тест и получите:</div>
+									<div class="duty__list">
+										<ul>
+											<li class="list-duty">Варианты списания вашего долга</li>
+											<li class="list-duty">Консультацию юриста по списанию долгов</li>
+											<li class="list-duty">Сроки и стоимость списания</li>
+											<li class="list-duty">Список необходимых документов для начала процедуры</li>
+										</ul>
+									</div>
+									<button class="btn btn__header popup__send btn__arrow">Получить варианты списания</button>
 								</div>
-								<button class="btn btn__header popup__send">Получить варианты списания</button>
+								<div  class="popup__send">
+									<form action="sendmail.php" id="form">
+
+										<div class="duty__body-child1 cviz__1">
+											<div class="form__arrow"></div>
+											<h3 class="form__title">Укажите общую сумму ваших долгов</h3>
+											<div class="form-list">
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice1" name="contact" value="email"
+														class="contactRadio">
+													<label for="contactChoice1">менее 500 000 рублей</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice2" name="contact" value="phone"
+														class="contactRadio">
+													<label for="contactChoice2">от 500 000 до 1 000 000 рублей</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice3" name="contact" class="contactRadio">
+													<label for="contactChoice3">от 1 000 000 до 5 000 000 рублей</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice4" name="contact" class="contactRadio">
+													<label for="contactChoice4">более 5 000 000</label>
+												</div>
+											</div>
+											<button class="btn btn__header popup__send btn__arrow">Далее</button>
+										</div>
+
+
+										<div class="duty__body-child1 cviz__2">
+											<div class="form__arrow"></div>
+											<h3 class="form__title">Есть ли у вас в собственности имущество?</h3>
+											<div class="form-list">
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice1" name="contact" value="email"
+														class="contactRadio">
+													<label for="contactChoice1">Да, есть квартира (две и более)</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice2" name="contact" value="phone"
+														class="contactRadio">
+													<label for="contactChoice2">Да, есть автомобиль</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice3" name="contact" class="contactRadio">
+													<label for="contactChoice3">Да, есть коммерческая собственность</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice4" name="contact" class="contactRadio">
+													<label for="contactChoice4">Да, есть другая собственность</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice5" name="contact" class="contactRadio">
+													<label for="contactChoice5">Нет, ничего нет</label>
+												</div>
+											</div>
+											<button class="btn btn__header popup__send btn__arrow">Назад</button>
+											<button class="btn btn__header popup__send btn__arrow">Далее</button>
+										</div>
+
+										<div class="duty__body-child1 cviz__3">
+											<div class="form__arrow"></div>
+											<h3 class="form__title">Совершали ли вы крупные сделки за последние 3 года?</h3>
+											<div class="form-list">
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice1" name="contact" value="email"
+														class="contactRadio">
+													<label for="contactChoice1">Да. была продажа квартиры / авто / участка</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice2" name="contact" value="phone"
+														class="contactRadio">
+													<label for="contactChoice2">Да. была продажа коммерческой собственности</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice3" name="contact" class="contactRadio">
+													<label for="contactChoice3">Да, была продажа ИП / ООО</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice4" name="contact" class="contactRadio">
+													<label for="contactChoice4">Да, была продажа (другое)</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice5" name="contact" class="contactRadio">
+													<label for="contactChoice5">Нет, ничего не было</label>
+												</div>
+											</div>
+											<button class="btn btn__header popup__send btn__arrow">Назад</button>
+											<button class="btn btn__header popup__send btn__arrow">Далее</button>
+										</div>
+
+										<div class="duty__body-child1 cviz__4">
+											<div class="form__arrow"></div>
+											<h3 class="form__title">Как вы бы хотели получить варианты списанию долгов и
+												консультацию юриста?</h3>
+											<div class="form-list">
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice1" name="contact" value="email"
+														class="contactRadio">
+													<label for="contactChoice1">В офисе «ЮрКонсалт+»</label>
+												</div>
+												<div class="form-list-input">
+													<input type="radio" id="contactChoice2" name="contact" value="phone"
+														class="contactRadio">
+													<label for="contactChoice2">По телефону</label>
+												</div>
+
+											</div>
+											<button class="btn btn__header popup__send btn__arrow">Получить варианты
+												списания</button>
+										</div>
+
+
+										<div class="duty__body-child1 cviz__4">
+											<div class="form__block">
+												<h3 class="form__title">Укажите ваши контактные данные</h3>
+												<div class="form__item">
+													<input id="formName" placeholder="Алексей" name="name" class="form__input"
+														required>
+												</div>
+												<div class="form__item">
+													<input id="formNumber" placeholder="_ ( _ _ _ ) _ _ _ - _ _ - _ _" type="tel"
+														name="phone" class="form__input" required>
+												</div>
+
+												<div class="popup-link ">
+													<button class="btn btn__header popup__send">Получить консультацию юриста</button>
+													<p>*отправляя формы на данном сайте, вы даете согласие на обработку персональных
+														данных
+														в соответствии с 152-ФЗ</p>
+												</div>
+											</div </div>
+
+
+									</form>
+								</div>
+								<div style="display:none" class="form__thenx">
+									<div class="popup-2">
+										<h1 class="form__title popup-title">Благодарим за заявку!</h1>
+										<div class="form__call form-text">Ожидайте звонка нашего юриста с номера</div>
+										<div class="number">
+											<a class="tel" href="tel:8 495 230 21 55">8 495 230 21 55</a>
+											<div class="block__social">
+												<p>Узнайте о нас больше</p>
+												<div class="social__icons">
+													<a href="#"><img src="img/social/telegram.png" alt="telegram"></a>
+													<a href="#"><img src="img/social/vk.png" alt="vk"></a>
+													<a href="#"><img src="img/social/OK.png" alt="OK"></a>
+													<a href="#"><img src="img/social/instagram.png" alt="instagram"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
 							</div>
 						</div>
-					</div>
-					<div class="duty__column">
-						<div class="dute__image ibg"><img src="img/02.png" alt="Весы"></div>
+
+
+
+
+						<div class="duty__column">
+							<div class="dute__image"><img src="img/02.png" alt="Весы"></div>
+						</div>
+
 					</div>
 				</div>
 			</div>
+
+
 			<div class="services">
 				<div class="container">
 					<div class="services__body card">
@@ -177,6 +343,7 @@
 								</div>
 							</div>
 						</div>
+					</div>
 				</form>
 			</div>
 		</div>

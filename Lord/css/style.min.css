@@ -273,21 +273,132 @@ h6 {
   }
 }
 
-.ibg {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.duty {
   position: relative;
+  padding: 40px 0px;
 }
-
-.ibg img {
-  width: 0;
-  height: 0;
+.duty:after {
+  content: "";
   position: absolute;
+  background: #000;
+  height: 1px;
+  height: 100%;
+}
+.duty__column {
+  color: #fff;
+}
+.duty__column:last-child {
+  padding-left: 30px;
+}
+.duty__body {
+  display: flex;
+  padding: 48px 36px 78px 165px;
+}
+.duty__body-child1 button {
+  margin-top: 18px;
+  padding: 0;
+}
+.duty__body-child1 button:after {
+  position: absolute;
+  content: "";
+  background: url("../img/Arrow_right_light_02.png") 0 0 no-repeat;
   top: 0;
   left: 0;
-  opacity: 0;
-  visibility: hidden;
+  width: 21px;
+  height: 23px;
+}
+.duty__body-child1 h3 {
+  font-size: 14px;
+  line-height: 140%;
+  color: #9c9c9c;
+}
+.duty__title {
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 136%;
+  padding: 8px 0px 20px 0px;
+}
+.duty__p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  padding-bottom: 20px;
+}
+
+.list-duty {
+  position: relative;
+  padding-left: 32px;
+  line-height: 140%;
+  padding-bottom: 14px;
+}
+.list-duty:before {
+  position: absolute;
+  content: "";
+  background: url("../img/Arrow_right_light_02.png") 0 0 no-repeat;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 23px;
+}
+.list-duty:last-child {
+  width: 304px;
+}
+
+.dute__imageimg {
+  max-height: 497px;
+  max-width: 405px;
+}
+
+.duty-black {
+  background: #2a394c;
+  border-radius: 0px 10px 10px 0px;
+  margin-left: -165px;
+  max-width: 800px;
+}
+
+.duty-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__arrow {
+  position: relative;
+  padding: 17px 56px 17px 24px;
+  height: 56px;
+  right: 0;
+}
+.btn__arrow:after {
+  position: absolute;
+  content: "";
+  background: url("../img/Arrow_right_light_02.png") 0 0 no-repeat;
+  top: 25%;
+  width: 21px;
+  height: 23px;
+  margin-left: 13px;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.contactRadio {
+  padding-bottom: 14px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+input {
+  display: none;
+}
+
+label {
+  padding-bottom: 14px;
 }
 
 .footer {
