@@ -34,7 +34,6 @@ html,
 body {
   height: 100%;
   min-width: 320px;
-  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -293,24 +292,7 @@ h6 {
 .duty__body {
   display: flex;
   padding: 48px 36px 78px 165px;
-}
-.duty__body-child1 button {
-  margin-top: 18px;
-  padding: 0;
-}
-.duty__body-child1 button:after {
-  position: absolute;
-  content: "";
-  background: url("../img/Arrow_right_light_02.png") 0 0 no-repeat;
-  top: 0;
-  left: 0;
-  width: 21px;
-  height: 23px;
-}
-.duty__body-child1 h3 {
-  font-size: 14px;
-  line-height: 140%;
-  color: #9c9c9c;
+  max-width: 786px;
 }
 .duty__title {
   font-weight: 800;
@@ -323,6 +305,12 @@ h6 {
   font-size: 20px;
   line-height: 140%;
   padding-bottom: 20px;
+}
+
+.duty__body-child h3 {
+  font-size: 14px;
+  line-height: 140%;
+  color: #9c9c9c;
 }
 
 .list-duty {
@@ -362,17 +350,17 @@ h6 {
   justify-content: center;
 }
 
-.btn__arrow {
+.next-form {
+  max-width: 335px;
   position: relative;
-  padding: 17px 56px 17px 24px;
-  height: 56px;
-  right: 0;
+  display: block;
 }
-.btn__arrow:after {
+.next-form:after {
   position: absolute;
   content: "";
   background: url("../img/Arrow_right_light_02.png") 0 0 no-repeat;
-  top: 25%;
+  top: 50%;
+  transform: translateY(-50%);
   width: 21px;
   height: 23px;
   margin-left: 13px;
@@ -386,19 +374,149 @@ h6 {
   line-height: 140%;
 }
 
-.contactRadio {
-  padding-bottom: 14px;
+.form-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 59px 0px 0px;
+}
+.form-button__indent {
+  right: 95px;
+  display: flex;
+  align-items: center;
+}
+.form-button__btn-prev {
+  max-width: 133px;
+  display: block;
+  position: relative;
+}
+.form-button__btn-prev:before {
+  position: absolute;
+  content: "";
+  background: url("../img/prev.png") 0 0 no-repeat;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+  width: 21px;
+  height: 23px;
+  margin-right: 26px;
+}
+.form-button__btn-next {
+  max-width: 133px;
+  display: block;
+  position: relative;
+}
+.form-button__btn-next:after {
+  position: absolute;
+  content: "";
+  background: url("../img/Arrow_right_light_02.png") 0 0 no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 21px;
+  height: 23px;
+  margin-left: 13px;
+}
+
+.button {
+  border-radius: 8px;
+  padding: 17px 56px 17px 24px;
+  font-family: "Open Sans";
   font-weight: 600;
   font-size: 16px;
   line-height: 140%;
+  width: 100%;
 }
 
-input {
+.button__prev {
+  border-radius: 8px;
+  padding: 17px 24px 17px 56px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  width: 100%;
+  background: #2a394c;
+  color: #a7a7a7;
+  margin: 0px 20px 0px 0px;
+}
+.button__prev:hover {
+  background: #ff4b4b;
+}
+
+.btn-primery {
+  background: #ff4b4b;
+  color: #fff;
+}
+
+.form__group {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  padding-bottom: 14px;
+  display: flex;
+  align-items: center;
+}
+.form__group:last-child {
+  padding: 0;
+}
+.form__label-radio {
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+.form__label-radio:before {
+  content: "";
+  display: inline-flex;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #ccd2e3;
+  transform: translateY(20%);
+  border-radius: 50%;
+  align-self: center;
+  margin-right: 11px;
+}
+
+.quiz__nav {
+  display: flex;
+  max-width: 240px;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  position: relative;
+  height: 16px;
+}
+.quiz__nav span {
+  position: relative;
+  z-index: 14;
+}
+.quiz__nav span:nth-child(-n+3)::after {
+  content: "";
+  position: absolute;
+  width: 63px;
+  border: 1px solid #9c9c9c;
+  height: 1px;
+  left: 15px;
+  top: 50%;
+  align-self: center;
+  transform: translateY(-50%);
+}
+
+.form-input {
   display: none;
 }
 
-label {
-  padding-bottom: 14px;
+.form__column {
+  margin-bottom: 62px;
+}
+
+.form-input:checked + .form__label-radio::before {
+  content: "";
+  background: url("../img/radio.png") center no-repeat;
+  width: 19px;
+  height: 19px;
+  transform: translateY(20%);
+}
+
+.form__fieldset {
+  width: 584px;
 }
 
 .footer {
@@ -669,6 +787,7 @@ label {
   max-height: 600px;
   position: relative;
 }
+
 .form__body {
   width: 560px;
   padding: 80px 217px 202px 80px;
@@ -725,6 +844,7 @@ label {
   color: #ffffff;
   margin: 12px 0px;
 }
+
 input:invalid {
   border: 0.5px solid #b6b5b5;
   background: #ffffff;
