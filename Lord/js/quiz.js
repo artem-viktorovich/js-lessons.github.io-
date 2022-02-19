@@ -4,15 +4,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const form = document.querySelector(".quiz-body__form");
 	const formItems = form.querySelectorAll('fieldset');
-	const btnNext = form.querySelectorAll('form-button__btn-next');
-	const btnPrev = form.querySelectorAll('form-button__btn-prev');
+	const btnNext = form.querySelectorAll('.form-button__btn-next');
+	const btnPrev = form.querySelectorAll('.form-button__btn-prev');
 
 	btnNext.forEach((btn, btnIndex) => {
 		btn.addEventListener('click', (event) => {
 			event.preventDefault(); //submit отключается, и отменяет стандартное отображение и работу кнопки в браузере
 			formItems[btnIndex].style.display = "none";
 			formItems[btnIndex + 1].style.display = "block";
+			console.log(btnNext);
 		});
+	});
+
+	btnPrev.forEach((btn, btnIndex) => {
+		btn.addEventListener('click', (event) => {
+			event.preventDefault();
+			formItems[btnIndex + 1].style.display = "block";
+			formItems[btnIndex].style.display = "none";
+		})
 	});
 
 	formItems.forEach((formItem, formItemIndex) => {

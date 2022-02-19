@@ -12,17 +12,17 @@ $(document).ready(function () {
 
 
 	//отвечает за смену попапа
-	$('form').on('submit', function (e) {
-		e.preventDefault();
-		var form = $(this);
-		if ($(this).find('input').val() == '') {
-			$('.popup').fadeOut(300);
-		} else {
-			form.children('.form__block').fadeOut(300, function () {
-				form.children('.form__thenx').fadeIn(300);
-			});
-		}
-	});
+	// $('form').on('submit', function (e) {
+	// 	e.preventDefault();
+	// 	var form = $(this);
+	// 	if ($(this).find('input').val() == '') {
+	// 		$('.popup').fadeOut(300);
+	// 	} else {
+	// 		form.children('.form__block').fadeOut(300, function () {
+	// 			form.children('.form__thenx').fadeIn(300);
+	// 		});
+	// 	}
+	// });
 
 	//код отвечающий за выход мыши
 	var flag = false;
