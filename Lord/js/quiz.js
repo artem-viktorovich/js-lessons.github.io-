@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			event.preventDefault(); //submit отключается, и отменяет стандартное отображение и работу кнопки в браузере
 			formItems[btnIndex].style.display = "none";
 			formItems[btnIndex + 1].style.display = "block";
-			console.log(btnNext);
+			
 		});
 	});
 
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			event.preventDefault();
 			formItems[btnIndex + 1].style.display = "block";
 			formItems[btnIndex].style.display = "none";
+			// console.log(btnPrev);
 		})
 	});
 
