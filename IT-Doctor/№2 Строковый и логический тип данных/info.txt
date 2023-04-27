@@ -1,0 +1,54 @@
+let str = "hello"; строка
+str.length - длина строки
+"Lkbyyfz cnhjrf".length - такой способ длины строки применяется
+
+
+let str = "hello"
+undefined
+str
+'hello'
+str[0] получаем индекс с длины заданной переменной
+'h'
+
+
+str[str.length-1] узнаём индекс с конкретной переменной
+'o'
+
+let str = "hello"
+undefined
+str.sl
+undefined
+str.slice(1) - получаем данные строки, начиная с данного индекса
+'ello'
+
+str.slice(1,3) получаем данные в пределах указанных индексов
+'el'
+
+
+str.toLocaleLowerCase() превращает строку в нижний регистр
+'hello'
+str.toLocaleUpperCase() превращает строку в верхний регистр
+'HELLO'
+
+
+let text = "  СтРокА  ";
+undefined
+text.toLocaleLowerCase() -преобразили в нужный регистр
+'  строка  '
+text.toLocaleLowerCase().trim(); - преобразили строку в нужный и красивый вид. trim - убирает пробелы
+'строка'
+
+let text = "  СтРокА  ";
+undefined
+text.toLocaleLowerCase() 
+'  строка  '
+text.toLocaleLowerCase().trim();
+'строка'
+'строка'
+let str1 = text.toLocaleLowerCase().trim();
+undefined
+str1[0].toLocaleUpperCase()+str1.slice(1); взяли первый букву по индексу, задали ей регистр и с помощью slice вывели остаток строки
+'Строка'
+
+Логические элементы
+true && true - && - логическое и
