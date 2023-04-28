@@ -1,0 +1,16 @@
+obj
+{color: 'Tomato', font-size: '15px', numbers: Array(2)}
+obj['color']
+'Tomato'
+obj.color
+'Tomato'
+obj.number[1] индекс
+
+obj['font-size'] индекс
+'15px'
+Objects.keys(obj)
+
+Objects.keys(obj) ключи объекта
+
+Object.keys(obj)
+(3) ['color', 'font-size', 'numbers'] ключи объекта (начальные значения)
