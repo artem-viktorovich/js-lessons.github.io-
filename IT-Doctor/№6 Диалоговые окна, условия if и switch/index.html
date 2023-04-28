@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диалоговые окна</title>
+</head>
+<body>
+    
+    <script>   
+    // let age = prompt("Ваш возраст?");
+    // if (age != null){
+    //     alert("Ваш возраст " + age);
+    // } else {
+    //     alert("Вы нажали отмена ");
+    // }
+    // if(confirm("Удалить что-то")){
+    //     alert("удалено")
+    // }else {
+    //     alert('отменено')
+    // }
+    // confirm("Удалить ваш аккаунт?") ? alert("Удалено") : alert("Отменено");
+
+    // let age = prompt("Ваш возраст?");
+    // if (age < 18){
+    //     alert("Ваш возраст меньше 18")
+    // } else if (age > 18) {
+    //     alert("Вам больше 18");
+    // } else if( age = 18){
+    //     alert("Ваш возраст 18");
+    // }
+
+    let age = prompt("Ваш возраст?");
+        switch(true){
+            case age > 18:
+                alert("Вам больше 18");
+            break;
+            case age < 18:
+                alert("Вам меньше 18");
+            break;
+            default: 
+                alert("Ваш возраст 18");
+        }
+
+
+
+    </script>
+</body>
+</html>

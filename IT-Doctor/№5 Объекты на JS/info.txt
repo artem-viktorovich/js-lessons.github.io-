@@ -4,8 +4,6 @@ obj['color']
 'Tomato'
 obj.color
 'Tomato'
-obj.number[1] индекс
-
 obj['font-size'] индекс
 '15px'
 Objects.keys(obj)
