@@ -1,0 +1,26 @@
+﻿1. библиотека stringTime.js для работы с временем в строковом формате
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDJJT3pBZ1RSNV9jaTNTVjFsbFVsWGNKMXRDd3xBQ3Jtc0tsTUZ5WmlEWW1GaHMzUmNpTGFNWTZmS0dYVXRnS01kZlBrdzY3elJVVnd3RVROUXhzT3gxUUtHakdkR1FLT01ySDUwSk9WVUp3SzE1SVdKWmJTdzJxbGFBWXBWUWpsQWhRT1RDS2RzNTlrOXhmVzRETQ&q=https%3A%2F%2Fgithub.com%2FmorphIsmail%2FstringTimeJS&v=jMoyWtoDtYA
+2. Генератор документации JSDoc
+https://ru.wikipedia.org/wiki/JSDoc
+3. Обработка ошибок на JavaScript
+https://learn.javascript.ru/try-catch
+4. Перехват ошибок на JavaScript
+https://learn.javascript.ru/exception
+
+function timeToMinute(time) {
+    try {
+        let hour = +time.split(":")[0]
+        let minute =  +time.split(":")[1]
+        if( !(hour>=0 && hour<=23) || !(minute>=0 && minute<=59)) - условие, которое делает сравнение в заданном диапазоне времени
+    {
+        throw new RangeError(`Аргумент должен быть в формате
+         'hh:mm' - 'hh' должен быть от 0 до 23, а 'mm' должен быть 
+         от 0 до 59. 'hh' и 'mm' должны быть числами и разделяться знаком ":"`)
+    }
+        return hour*60+minute
+    } catch (error) {
+        console.log(error);
+    }
+   
+}
+console.log(timeToMinute("02:08"));  -именно этот блок помогает делать вычисления по количествам минут из времени
