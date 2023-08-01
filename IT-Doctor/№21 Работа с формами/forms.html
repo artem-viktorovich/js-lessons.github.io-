@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form action="" name="form1">
+        <input type="text" name="input1" value="1">
+        <input type="text" name="input2" value="2">
+        <input type="radio" name="radioBtn" value="btn1" checked>
+        <input type="radio" name="radioBtn" value="btn2">
+        <input type="radio" name="radioBtn" value="btn3">
+        <fieldset name="myFieldset">
+            <legend>Title</legend>
+            <input type="password" name="password">
+        </fieldset>
+        <select name="mySelect1" id="">
+            <option value="item1" selected>Элемент 1</option>
+            <option value="item2">Элемент 2</option>
+            <option value="item3">Элемент 3</option>
+        </select>
+        <select name="mySelect2" id="" multiple>
+            <option value="item4" selected>Элемент 1</option>
+            <option value="item5" selected>Элемент 2</option>
+            <option value="item6">Элемент 3</option>
+        </select>
+    </form> -->
+   
+
+    <form class="form">
+        <input type="text">
+        <input type="submit" value="Кнопка submit">
+        <input type="image" value="Кнопка image">
+    </form>
+
+</body>
+<script>
+    // let form = document.forms.form1 //нашли форму
+    // let selectes = form.elements.mySelect1
+    // console.log(selectes.options);
+
+    // input.onchange = function(){
+    //     console.log(input.value);
+    // }
+
+
+    //copy,paste, cut
+
+    //clipboardData - объект для буфера обмена
+    //getData обычный текст для буфера обмена
+    // input.oncut = input.oncopy = input.onpaste = function (e) {
+    //     console.log(e.type + '-' + e.clipboardData.getData('text/plain'))
+    //     return false //предотвращение стандартного поведения
+    // }
+    //код записи -  <input type="text" id="input">
+   //в этой функции мы отслеживаем какое событие мы делаем, копирывание, вырезание или вставка
+
+
+
+   let form = document.forms[0]
+   form.onsubmit = function(e){
+    console.log('Отправка формы')
+    e.preventDefault()
+   }
+
+   //событие для отправки формы и выводы инфы об этом
+   
+</script>
+
+</html>
