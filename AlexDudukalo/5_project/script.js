@@ -1,11 +1,21 @@
 
+document.write("<h1>Список студентов</h1>")
+let index = 0;
 
 
+function StudentParam(nameStudent, ageStudent, yearStudent, faculty) {
+    index++
+    document.write(`<p>${index}) <strong>
+    имя студента:</strong> ${nameStudent}, <strong>
+    возраст студента:</strong> ${ageStudent}, <strong>
+    год рождения студента:</strong>${yearStudent}, <strong>
+    факультет:</strong> ${faculty}</p>`)
+}
 
-
-
-
-
+StudentParam("Василий", 20, 1996, "Исторический")
+StudentParam("Анастасия", 22, 1996, "Исторический")
+StudentParam("Олег", 21, 1995, "Исторический")
+StudentParam("Олексей", 12, 1996, "Исторический")
 
 
 
