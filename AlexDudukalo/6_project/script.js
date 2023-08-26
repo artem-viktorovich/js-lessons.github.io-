@@ -57,11 +57,14 @@ function strong(text) {
 function printProduct(productName, count, price) {
     let totalPrice = count * price
     document.write(`
-        <p>${strong('Наименование товара:')} ${productName}, ${strong('Количество товара:')} ${count},  ${strong('Стоимость товара:')} ${price}р, 
-        ${strong('Общая стоимость:')} ${totalPrice}
+        <p>
+            ${strong('Наименование товара:')} ${productName}, 
+            ${strong('Количество товара:')} ${count},  
+            ${strong('Стоимость товара:')} ${price}р, 
+            ${strong('Общая стоимость:')} ${totalPrice}
         </p>
 `)
-return totalPrice
+    return totalPrice
 }
 let total = 0
 total = total + printProduct(' Картофель', 2, 230)
