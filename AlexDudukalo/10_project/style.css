@@ -1,0 +1,54 @@
+body {
+    padding: 40px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(164, 161, 161);
+}
+
+.open-btn {
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+    padding: 14px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+.open-btn:hover {
+    background-color: rgb(123, 27, 212);
+}
+.open-btn:active {
+    background-color: rgb(88, 11, 160);
+}
+
+.menu {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    max-width: 280px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s,
+        visibility 0.3s;
+}
+.menu.open {
+    opacity: 1;
+    visibility: visible;
+}
+.menu__link {
+    display: block;
+    text-decoration: none;
+    padding: 15px 30px;
+    color: rgb(164, 161, 161);
+    transition: background-color 0.3s;
+}
+.menu__link:hover {
+    background-color: rgb(122, 119, 119);
+    color: black;
+}
